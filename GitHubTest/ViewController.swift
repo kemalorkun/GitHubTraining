@@ -71,9 +71,17 @@ extension HomeViewController {
     
     private func addSubViews() {
         view.backgroundColor = .systemBackground
+        addSafeAreView()
         addOrkunLabel()
         addMenuLeftBarButton()
         addSearchRightBarButton()
+    }
+    
+    private func addSafeAreView() {
+        let safeArea = UIView()
+        safeArea.backgroundColor = .systemPink
+        view.addSubview(safeArea)
+        safeArea.fillSuperViewSafeArea()
     }
     
     private func addOrkunLabel() {
@@ -82,6 +90,8 @@ extension HomeViewController {
         orkunLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor,
                           left: view.safeAreaLayoutGuide.leftAnchor,
                           paddingTop: 20, paddingLeft: 20)
+        
+        
         
     }
     

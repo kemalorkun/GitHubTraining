@@ -7,6 +7,13 @@
 
 import UIKit
 
+extension Collection where Indices.Iterator.Element == Index {
+    subscript (safe index: Index) -> Iterator.Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
+
+
 class HomeViewController: UIViewController {
     
     // MARK: - Views
@@ -30,12 +37,21 @@ class HomeViewController: UIViewController {
     }(UILabel())
     
     // MARK: - Properties
+    private let systemTitles: (title: String, subtitle: String?) = (title: "Dog", subtitle: nil)
+    
+    private var titleList: [String] = ["Orkun", "Onur", "Nazmi", "Kapak"]
+    private var name: String?
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureContents()
         addSubViews()
+        
+        
+        print("name: \(titleList[safe: 5] ?? "nil")")
+        print("title: \(systemTitles.title)")
+        print("subtitle: \(systemTitles.subtitle ?? "subtitle is nil")")
     }
     
     override func viewWillAppear(_ animated: Bool) {

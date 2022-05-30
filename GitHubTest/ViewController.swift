@@ -62,7 +62,9 @@ extension HomeViewController {
     
     private func addOrkunLabel() {
         view.addSubview(orkunLabel)
-        orkunLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.safeAreaLayoutGuide.leftAnchor,
+        // TODO: change to tinyconstraint
+        orkunLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor,
+                          left: view.safeAreaLayoutGuide.leftAnchor,
                           paddingTop: 20, paddingLeft: 20)
         
     }

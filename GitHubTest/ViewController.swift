@@ -64,6 +64,16 @@ class HomeViewController: UIViewController {
         print("DEBUG: fetchList()")
     }
     
+    private func showAlert(printText: String) {
+        let alert = UIAlertController(title: "Warning", message: nil, preferredStyle: .alert)
+        let saveButton = UIAlertAction(title: "Save", style: .default) { _ in
+            print("DEBUG: \(printText)")
+        }
+        alert.addAction(saveButton)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: - UILayout
@@ -73,8 +83,8 @@ extension HomeViewController {
         view.backgroundColor = .systemBackground
         addSafeAreView()
         addOrkunLabel()
-        addMenuLeftBarButton()
-        addSearchRightBarButton()
+        addHomeLeftBarButton()
+        addMenuRightBarButton()
     }
     
     private func addSafeAreView() {
@@ -95,15 +105,15 @@ extension HomeViewController {
         
     }
     
-    private func addSearchRightBarButton() {
+    private func addMenuRightBarButton() {
         let image = UIImage(systemName: "sidebar.right")
-        let searchBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(searchButtonTapped))
+        let searchBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(menuButtonTapped))
         navigationItem.rightBarButtonItem = searchBarButton
     }
     
-    private func addMenuLeftBarButton() {
+    private func addHomeLeftBarButton() {
         let image = UIImage(systemName: "house")
-        let menuBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(menuButtonTapped))
+        let menuBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(homeButtonTapped))
         navigationItem.leftBarButtonItem = menuBarButton
     }
     
@@ -122,13 +132,13 @@ extension HomeViewController {
 extension HomeViewController {
     
     @objc
-    private func searchButtonTapped() {
-        print("DEBUG: searchButtonTapped")
+    private func homeButtonTapped() {
+        showAlert(printText: "homeButtonTapped")
     }
     
     @objc
     private func menuButtonTapped() {
-        print("DEBUG: menuButtonTapped")
+        showAlert(printText: "menuButtonTapped")
     }
     
 }

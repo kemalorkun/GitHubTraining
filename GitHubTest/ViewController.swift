@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 //    Orkun's training
-
+// Nazmi's comment to teach how to use github
 
 }
 

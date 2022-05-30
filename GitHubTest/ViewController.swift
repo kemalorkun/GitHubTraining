@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     }
 //    Orkun's training
 // Nazmi's comment to teach how to use github
-
+// Nazmi wip-home-screen
+    
+    
 }
 

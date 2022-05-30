@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		40BF4C342845064C001CB50D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF4C332845064B001CB50D /* Extensions.swift */; };
+		40BF4C36284511BE001CB50D /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF4C35284511BE001CB50D /* UIViewController+Extensions.swift */; };
+		40BF4C38284511E5001CB50D /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF4C37284511E5001CB50D /* Collection+Extensions.swift */; };
 		B7375C932844F39500AD457D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7375C922844F39500AD457D /* AppDelegate.swift */; };
 		B7375C952844F39500AD457D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7375C942844F39500AD457D /* SceneDelegate.swift */; };
 		B7375C972844F39500AD457D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7375C962844F39500AD457D /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		40BF4C332845064B001CB50D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		40BF4C35284511BE001CB50D /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		40BF4C37284511E5001CB50D /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		B7375C8F2844F39500AD457D /* GitHubTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7375C922844F39500AD457D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7375C942844F39500AD457D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				B7375C922844F39500AD457D /* AppDelegate.swift */,
 				B7375C942844F39500AD457D /* SceneDelegate.swift */,
 				B7375C962844F39500AD457D /* ViewController.swift */,
+				40BF4C35284511BE001CB50D /* UIViewController+Extensions.swift */,
+				40BF4C37284511E5001CB50D /* Collection+Extensions.swift */,
 				40BF4C332845064B001CB50D /* Extensions.swift */,
 				B7375C9B2844F39600AD457D /* Assets.xcassets */,
 				B7375C9D2844F39600AD457D /* LaunchScreen.storyboard */,
@@ -139,8 +145,10 @@
 			files = (
 				B7375C972844F39500AD457D /* ViewController.swift in Sources */,
 				B7375C932844F39500AD457D /* AppDelegate.swift in Sources */,
+				40BF4C36284511BE001CB50D /* UIViewController+Extensions.swift in Sources */,
 				B7375C952844F39500AD457D /* SceneDelegate.swift in Sources */,
 				40BF4C342845064C001CB50D /* Extensions.swift in Sources */,
+				40BF4C38284511E5001CB50D /* Collection+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

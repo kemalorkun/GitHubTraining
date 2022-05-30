@@ -7,13 +7,6 @@
 
 import UIKit
 
-extension Collection where Indices.Iterator.Element == Index {
-    subscript (safe index: Index) -> Iterator.Element? {
-        return indices.contains(index) ? self[index] : nil
-    }
-}
-
-
 class HomeViewController: UIViewController {
     
     // MARK: - Views
@@ -63,17 +56,6 @@ class HomeViewController: UIViewController {
     private func fetchList() {
         print("DEBUG: fetchList()")
     }
-    
-    private func showAlert(printText: String) {
-        let alert = UIAlertController(title: "Warning", message: nil, preferredStyle: .alert)
-        let saveButton = UIAlertAction(title: "Save", style: .default) { _ in
-            print("DEBUG: \(printText)")
-        }
-        alert.addAction(saveButton)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
-    
 }
 
 // MARK: - UILayout
